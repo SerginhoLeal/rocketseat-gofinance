@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { SafeAreaView } from 'react-native';
 
 import { ThemeProvider } from 'styled-components';
@@ -8,7 +8,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 import { useFonts } from 'expo-font';
 
-import Dashboard from "@screens/dashboard";
+import Register from "@screens/register";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,16 +23,16 @@ export default function App() {
     return null;
   };
 
-  const onLayoutRootView = useCallback(async () => {
+  const onLayoutRootView = async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
     }
-  }, [fontsLoaded]);
+  };
 
   return (
     <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <ThemeProvider theme={theme}>
-        <Dashboard />
+        <Register />
       </ThemeProvider>
     </SafeAreaView>
   );

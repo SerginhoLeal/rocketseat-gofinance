@@ -5,7 +5,7 @@
       // "@src/*": ["./src/*"],
       // "@hooks": ["./src/hooks"],
       // "@types": ["./src/types"],
-      // "@common": ["./src/common"],
+      "@common": ["./src/common"],
       // "@utils/*": ["./src/utils/*"],
       // "@context": ["./src/context"],
       "@screens/*": ["./src/screens/*"],

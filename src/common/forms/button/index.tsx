@@ -9,7 +9,7 @@ interface Props extends TouchableOpacityProps {
 
 export const Button: React.FC<Props> = ({ title, ...rest }: Props) => {
   return (
-    <Styles.Container>
+    <Styles.Container {...rest}>
       <Styles.Title>{title}</Styles.Title>
     </Styles.Container>
   );

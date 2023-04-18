@@ -41,7 +41,7 @@ const data: DataListProps[] = [
   }
 ];
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   return (
     <Styles.Container>
       <Styles.Header>
@@ -54,7 +54,9 @@ const Dashboard: React.FC = () => {
             </Styles.User>
           </Styles.UserInfo>
 
-          <Styles.Icon name="power" />
+          <Styles.LogoutButton onPress={() => {}}>
+            <Styles.Icon name="power" />
+          </Styles.LogoutButton>
 
         </Styles.UserWrapper>
       </Styles.Header>

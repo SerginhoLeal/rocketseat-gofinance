@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 
+import { NavigationContainer } from '@react-navigation/native';
+
 import { ThemeProvider } from 'styled-components';
 import theme from "./src/global/styles/theme";
 
@@ -8,7 +10,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 import { useFonts } from 'expo-font';
 
-import Register from "@screens/register";
+import Routes from "./src/routes";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -32,7 +34,9 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <ThemeProvider theme={theme}>
-        <Register />
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
       </ThemeProvider>
     </SafeAreaView>
   );
